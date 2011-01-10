@@ -6,14 +6,14 @@
                 <link href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema#Stop_position"
 					  de.href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/%C3%96PNV-Schema#Halteposition" />
 				<key key="public_transport" value="stop_position" />
-				<!--<text key="name" text="Name" default="" delete_if_empty="true" />-->
-				<combo key="name"
+				<text key="name" text="Name of the stop position" de.text="Name der Halteposition"  use_last_as_default="true" default="" delete_if_empty="true" />
+				<!--<combo key="name"
 					   text="name of the stop position"
 					   de.text="Name der Halteposition"
 					   values="one,two,three"
 					   de.display_values="St. Gangloff\, Schule,St. Gangloff\, Platz der Einheit,Hermsdorf\, Schule"
 					   use_last_as_default="true"
-					   default="" />
+					   default="" />-->
 				<combo key="operator"
 					   text="operator"
 					   de.text="Betreiber der Haltestelle"
@@ -35,19 +35,19 @@
 				<label text="Passagier Zugangsstelle bearbeiten" />
                 <link href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema#Access"
 					  de.href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/%C3%96PNV-Schema#Zugangsstelle" />
-				<key key="public_transport" value="platform" />
+				<key  key="public_transport"	value="platform" />
 				<!--the following key/value is only for backward compatibility needed! -->
-				<key key="highway" value="bus_stop" />
-				<text key="ref"		text="Referenz"			de.text="Referenz (A, B oder 1 ... 2 z.B.)"	default=""	delete_if_empty="true" />
-				<text key="uic_ref"	text="Station Number"	de.text="Stationsnummer (IBNR/UIC)"			default=""	delete_if_empty="true" />
-				<!--<text key="name" text="Name" default="" delete_if_empty="true" />-->
-				<combo key="name"
-					   text="name of the stop position"
+				<key  key="highway"				value="bus_stop" />
+				<text key="uic_ref"	text="Station Number"		de.text="Stationsnummer (IBNR=Bahn/UIC=Bus etc)"										default=""	delete_if_empty="true" />
+				<text key="ref"		text="Referenz"				de.text="Referenz (A, B oder 1 ... 2 z.B.)"												default=""	delete_if_empty="true" />
+				<text key="name"	text="Name of the platform"	de.text="Name der Zugangsstelle"							use_last_as_default="true"	default=""	delete_if_empty="true" />
+				<!--<combo key="name"
+					   text="name of the platform"
 					   de.text="Name der Zugangsstelle"
-					   values="St. Gangloff\, Schule,St. Gangloff\, Platz der Einheit,Hermsdorf\, Schule"
-					   de.display_values="St. Gangloff\, Schule,St. Gangloff\, Platz der Einheit;Hermsdorf\, Schule"
+					   values="one,two,three"
+					   de.display_values="St. Gangloff\, Schule,St. Gangloff\, Platz der Einheit,Hermsdorf\, Schule"
 					   use_last_as_default="true"
-					   default="" />
+					   default="" />-->
 				<combo key="operator"
 					   text="operator"
 					   de.text="Betreiber der Zugangsstelle"
@@ -76,9 +76,9 @@
                 <link href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema#Access"
 					  de.href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/%C3%96PNV-Schema#Zugangsstelle" />
 				<key   key="public_transport" value="entrance" />
-				<text  key="ref"			 text="Ref" default=""		delete_if_empty="true" /> <!-- really needed?-->
+				<text key="uic_ref"	text="Station Number"		de.text="Stationsnummer (IBNR=Bahn/UIC=Bus etc)"										default=""	delete_if_empty="true" />
 				<text  key="name"			 text="Name" default=""		delete_if_empty="true" />
-    			<check key="bus"			 text="Bus" 				de.text="Bus"						default="on"	delete_if_empty="true" />
+    			<check key="bus"			 text="Bus" 				de.text="Bus"						default="off"	delete_if_empty="true" />
 				<check key="rail"			 text="Railway"				de.text="Eisenbahn"					default="off"	delete_if_empty="true" />
 				<check key="light_rail"		 text="Light_rail"			de.text="Stadtbahn"					default="off"	delete_if_empty="true" />
 				<check key="subway"			 text="Subway"				de.text="U-Bahn"					default="off"	delete_if_empty="true" />

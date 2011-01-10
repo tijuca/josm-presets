@@ -1,0 +1,15 @@
+* some few presets for easier working with JOSM (Java Openstreetmap Editor)
+
+Install:
+1. copy the selected preset to a local directory in your profile,
+   on Windows7 like "C:/User and Settings/$USERNAME/josm-presets",
+   in Linux like /home/$USER/.josm/presets
+
+2. activate this preset in JOSM -> Edits -> Preferences (or short, press F12) -> Map Settings,
+   open the folder "Tagging Presets and add the preset to the field "Active styles"
+
+3. restart JOSM
+
+oepnv_preset_de-JES.xml:
+  Preset for public transport schema in the region of the "Saale-Holzland Kreis"
+  in Germany Thuringia.
