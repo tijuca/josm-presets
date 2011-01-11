@@ -1,9 +1,9 @@
 <annotations author="Marcus Koerner, Jan, Carsten Schoenert" version="0.3_2011-01-04" shortdescription="Public Transport Schema" de.shortdescription="OEPNV Schema" description="Public Transport presets" de.description="Vorlagen fuer OEPNV">
-	<group name="Public Transport JES" de.name="ÖPNV" icon="presets/bus.png">
+	<group name="Public Transport" de.name="ÖPNV" icon="presets/bus.png">
 		<group name="Stop" de.name="Haltestelle">
-			<item name="Stop Position" de.name="Halteposition" type="node" icon="presets/bus_small.png">
+	        <item name="Stop Position" de.name="Halteposition" type="node" icon="presets/bus_small.png">
 				<label text="ÖPNV Halteposition bearbeiten" />
-				<link href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema#Stop_position"
+                <link href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema#Stop_position"
 					  de.href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/%C3%96PNV-Schema#Halteposition" />
 				<key key="public_transport" value="stop_position" />
 				<text key="name" text="Name of the stop position" de.text="Name der Halteposition"  use_last_as_default="true" default="" delete_if_empty="true" />
@@ -31,11 +31,12 @@
 				<check key="aerialway"	text="aerialway"  de.text="Lufteilbahn"		default="off"	delete_if_empty="true" />
 				<check key="ferry"		text="ferry"	  de.text="Personenfähre"	default="off"	delete_if_empty="true" />
 			</item>
-			<item name="Platform" de.name="Zugangsstelle" type="node,way,closedway" icon="presets/bus_halt.png">
-				<label text="Passagier Zugangsstelle bearbeiten" />
-				<link href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema#Access"
+			<item name="Platform, Bus" de.name="Zugangsstelle, Bus" type="node,way,closedway" icon="presets/bus_halt.png">
+				<label text="Bus Zugangsstelle bearbeiten" />
+                <link href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema#Access"
 					  de.href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/%C3%96PNV-Schema#Zugangsstelle" />
 				<key  key="public_transport"	value="platform" />
+				<!--<key  key="bus"	value="yes" />-->
 				<!--the following key/value is only for backward compatibility needed! -->
 				<key  key="highway"				value="bus_stop" />
 				<text key="uic_ref"	text="Station Number"		de.text="Stationsnummer (IBNR=Bahn/UIC=Bus etc)"										default=""	delete_if_empty="true" />
@@ -55,8 +56,8 @@
 					   de.display_values="JES,JNV,JES;RVG,RVG"
 					   use_last_as_default="true"
 					   default="JES" />
-				<check key="bus"			 text="Bus" 				de.text="Bus"						default="on"	delete_if_empty="true" />
-				<check key="rail"			 text="Railway"				de.text="Eisenbahn"					default="off"	delete_if_empty="true" />
+				<!--<check key="bus"			 text="Bus" 				de.text="Bus"						default="on"	delete_if_empty="true" />
+    			<check key="rail"			 text="Railway"				de.text="Eisenbahn"					default="off"	delete_if_empty="true" />
 				<check key="light_rail"		 text="Light_rail"			de.text="Stadtbahn"					default="off"	delete_if_empty="true" />
 				<check key="subway"			 text="Subway"				de.text="U-Bahn"					default="off"	delete_if_empty="true" />
 				<check key="monorail"		 text="Monorail"			de.text="Einschienenbahn"			default="off"	delete_if_empty="true" />
@@ -64,43 +65,69 @@
 				<check key="funicular"		 text="funicular"			de.text="Standseilbahn"				default="off"	delete_if_empty="true" />
 				<check key="aerialway"		 text="aerialway"			de.text="Lufteilbahn"				default="off"	delete_if_empty="true" />
 				<check key="ferry"			 text="ferry"				de.text="Personenfähre"				default="off"	delete_if_empty="true" />
-				<check key="electronic_info" text="electronic info" 	de.text="Elektronische Infotafel"	default="off"	delete_if_empty="true" />
+				-->
+				<combo key="electronic_info" text="electronic info" 	de.text="Elektronische Infotafel"	values="yes,no, 1,2,3"			de.display_values="ja,nein,1,2,3"	delete_if_empty="true" />
 				<combo key="wheelchair"		 text="weelchair suitable"	de.text="Rollstuhl geeignet"		values="yes,no,limited,only"	de.display_values="ja,nein,beschränkt,ausschließlich"	default="" />
 				<check key="bench"			 text="Bench"				de.text="Sitzbank"					default="off"	delete_if_empty="true" />
 				<check key="bin"			 text="Bin"					de.text="Mülleimer"					default="off"	delete_if_empty="true" />
 				<check key="shelter"		 text="Shelter"				de.text="Unterstellmöglichkeit"		default="off"	delete_if_empty="true" />
 				<check key="toilet"			 text="Toilet"				de.text="Toilette"					default="off"	delete_if_empty="true" />
 			</item>
-			<item name="Entrance" de.name="Eingang" type="node,way,closedway" icon="presets/underground.png">
+            <item name="Platform, Railway" de.name="Zugangsstelle, Eisenbahn" type="way,closedway" icon="presets/station.png">
+				<label text="Bahnsteig bearbeiten" />
+                <link href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema#Access"
+					  de.href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/%C3%96PNV-Schema#Zugangsstelle" />
+				<key  key="public_transport"	value="platform" />
+				<key  key="railway"				value="platform" />
+				<key  key="rail"				value="yes" />
+				<text key="uic_ref"	text="Station Number"		de.text="Stationsnummer (IBNR)"											default=""	delete_if_empty="true" />
+				<text key="ref"		text="Referenz"				de.text="Referenz (A, B oder 1 ... 2 z.B.)"								default=""	delete_if_empty="true" />
+				<text key="name"	text="Name of the platform"	de.text="Name des Bahnsteigs"				use_last_as_default="true"	default=""	delete_if_empty="true" />
+				<combo key="operator"
+					   text="operator"
+					   de.text="Betreiber der Zugangsstelle"
+					   values="Deutsche Bahn"
+					   de.display_values="Deutsche Bahn"
+					   use_last_as_default="true"
+					   default="JES" />
+				<combo key="electronic_info" text="electronic info" 	de.text="Elektronische Infotafel"	values="yes,no, 1,2,3"			de.display_values="ja,nein,1,2,3"	delete_if_empty="true" />
+				<combo key="wheelchair"		 text="weelchair suitable"	de.text="Rollstuhl geeignet"		values="yes,no,limited,only"	de.display_values="ja,nein,beschränkt,ausschließlich"	default="" />
+				<check key="bench"			 text="Bench"				de.text="Sitzbank"					default="off"	delete_if_empty="true" />
+				<check key="bin"			 text="Bin"					de.text="Mülleimer"					default="off"	delete_if_empty="true" />
+				<check key="shelter"		 text="Shelter"				de.text="Unterstellmöglichkeit"		default="off"	delete_if_empty="true" />
+				<check key="toilet"			 text="Toilet"				de.text="Toilette"					default="off"	delete_if_empty="true" />
+			</item>
+            <item name="Entrance" de.name="Eingang" type="node,way,closedway" icon="presets/underground.png">
 				<label text="unterirdische Passagier Zugangstelle bearbeiten" />
-				<link href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema#Access"
+                <link href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema#Access"
 					  de.href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/%C3%96PNV-Schema#Zugangsstelle" />
 				<key   key="public_transport" value="entrance" />
-				<text  key="uic_ref"	text="Station Number"		de.text="Stationsnummer (IBNR=Bahn/UIC=Bus etc)"										default=""	delete_if_empty="true" />
+				<text key="uic_ref"	text="Station Number"		de.text="Stationsnummer (IBNR=Bahn/UIC=Bus etc)"										default=""	delete_if_empty="true" />
 				<text  key="name"			 text="Name" default=""		delete_if_empty="true" />
-				<check key="bus"			 text="Bus" 				de.text="Bus"						default="off"	delete_if_empty="true" />
-				<check key="rail"			 text="Railway"				de.text="Eisenbahn"					default="off"	delete_if_empty="true" />
-				<check key="light_rail"		 text="Light_rail"			de.text="Stadtbahn"					default="off"	delete_if_empty="true" />
-				<check key="subway"			 text="Subway"				de.text="U-Bahn"					default="off"	delete_if_empty="true" />
-				<check key="monorail"		 text="Monorail"			de.text="Einschienenbahn"			default="off"	delete_if_empty="true" />
-				<check key="tram"			 text="Tram"				de.text="Straßenbahn"				default="off"	delete_if_empty="true" />
-				<check key="funicular"		 text="funicular"			de.text="Standseilbahn"				default="off"	delete_if_empty="true" />
-				<check key="aerialway"		 text="aerialway"			de.text="Lufteilbahn"				default="off"	delete_if_empty="true" />
-				<check key="ferry"			 text="ferry"				de.text="Personenfähre"				default="off"	delete_if_empty="true" />
-				<check key="electronic_info" text="electronic info" 	de.text="Elektronische Infotafel"	default="off"	delete_if_empty="true" />
+    			<check key="bus"			 text="Bus" 				de.text="Bus"						default="off"		delete_if_empty="true" />
+				<check key="rail"			 text="Railway"				de.text="Eisenbahn"					default="off"		delete_if_empty="true" />
+				<check key="light_rail"		 text="Light_rail"			de.text="Stadtbahn"					default="off"		delete_if_empty="true" />
+				<check key="subway"			 text="Subway"				de.text="U-Bahn"					default="off"		delete_if_empty="true" />
+				<check key="monorail"		 text="Monorail"			de.text="Einschienenbahn"			default="off"		delete_if_empty="true" />
+				<check key="tram"			 text="Tram"				de.text="Straßenbahn"				default="off"		delete_if_empty="true" />
+				<check key="funicular"		 text="funicular"			de.text="Standseilbahn"				default="off"		delete_if_empty="true" />
+				<check key="aerialway"		 text="aerialway"			de.text="Lufteilbahn"				default="off"		delete_if_empty="true" />
+				<check key="ferry"			 text="ferry"				de.text="Personenfähre"				default="off"		delete_if_empty="true" />
+				<check key="electronic_board" text="electronic info" 	de.text="Elektronische Infotafel"	default="off"		delete_if_empty="true" />
+				<combo key="highway"		 text="Elevator" 			de.text="Aufzug					"	values="persons,car"			de.display_values="Personen,Auto"		delete_if_empty="true" />
 				<combo key="wheelchair"		 text="weelchair suitable"	de.text="Rollstuhl geeignet"		values="yes,no,limited,only"	de.display_values="ja,nein,beschränkt,ausschließlich"	default="" />
-				<check key="bench"			 text="Bench"				de.text="Sitzbank"					default="off"	delete_if_empty="true" />
-				<check key="bin"			 text="Bin"					de.text="Mülleimer"					default="off"	delete_if_empty="true" />
-				<check key="shelter"		 text="Shelter"				de.text="Unterstellmöglichkeit"		default="off"	delete_if_empty="true" />
-				<check key="toilet"			 text="Toilet"				de.text="Toilette"					default="off"	delete_if_empty="true" />
+				<check key="bench"			 text="Bench"				de.text="Sitzbank"					default="off"		delete_if_empty="true" />
+				<check key="bin"			 text="Bin"					de.text="Mülleimer"					default="off"		delete_if_empty="true" />
+				<check key="shelter"		 text="Shelter"				de.text="Unterstellmöglichkeit"		default="off"		delete_if_empty="true" />
+				<check key="toilet"			 text="Toilet"				de.text="Toilette"					default="off"		delete_if_empty="true" />
 			</item>
-			<item name="Stop Area" de.name="Gesamthalt" type="relation">
+    		<item name="Stop Area" de.name="Gesamthalt" type="relation">
 				<label text="Gesamthalt Relation bearbeiten" />
 				<link href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema#Stop_area"
 					  de.href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/%C3%96PNV-Schema#Gesamthalt" />
 				<key key="type" value="public_transport" />
-				<key key="public_transport" value="stop_area" />
-				<text key="ref" text="Ref" de.text="Identifikationsnummer" default="" delete_if_empty="true" />
+	      		<key key="public_transport" value="stop_area" />
+      			<text key="ref" text="Ref" de.text="Identifikationsnummer" default="" delete_if_empty="true" />
 				<!--<text key="name" text="Name" default="" delete_if_empty="true" />-->
 				<combo key="name"
 					   text="name of the stop position"
@@ -109,7 +136,7 @@
 					   de.display_values="St. Gangloff\, Schule,St. Gangloff\, Platz der Einheit,Hermsdorf\, Schule"
 					   use_last_as_default="true"
 					   default="" />
-				<combo key="operator"
+			    <combo key="operator"
 					   text="Betreiber der Zugangsposition"
 					   values="JES,JNV,RVG,JES;RVG"
 					   default="JES"
@@ -117,7 +144,7 @@
 					   <!--use_last_as_default="true"-->
 				<!--<text key="operator" text="Operator" de.text="Betreiber" default="" delete_if_empty="true" />-->
 			</item>
-			<item name="Stop Area Ground" de.name="Gesamthalt-Gruppe" type="relation">
+	    	<item name="Stop Area Ground" de.name="Gesamthalt-Gruppe" type="relation">
 				<label text="Gesamthalt Gruppen Relation bearbeiten" />
 				<link href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema#Stop_area_group"
 					  de.href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/%C3%96PNV-Schema#Gesamthalt-Gruppe" />
@@ -131,20 +158,20 @@
 					  de.href="http://wiki.openstreetmap.org/wiki/DE:Tag:amenity%3Dvending_machine" />
 				<key   key="amenity"					value="vending_machine" />
 				<key   key="vending"					value="public_transport_tickets" />
-				<text  key="name"						text="Name"											default=""	delete_if_empty="true" />
-				<text  key="operator"					text="Operator"			de.text="Betreiber"			default=""	delete_if_empty="true" />
-				<text  key="ref"						text="Referenz Numberr"	de.text="Referenznummer"	default=""	delete_if_empty="true" />
-				<check key="payment:coins"				text="Coins"			de.text="Münzen"			default="off" />
-				<check key="payment:notes"				text="Notes"			de.text="Banknoten"			default="off" />
-				<check key="payment:electronic_purses"	text="Money Card"		de.text="Geld-Karte"		default="off" />
-				<check key="payment:debit_cards"		text="EC/maestro-Card"	de.text="EC/maestro-Karte"	default="off" />
-				<check key="payment:credit_cards"		text="Creditcard"		de.text="Kreditkarte"		default="off" />
+				<text  key="name"						text="Name"				default=""	delete_if_empty="true" />
+				<text  key="operator"					text="Operator"			de.text="Betreiber" default=""	delete_if_empty="true" />
+				<text  key="ref"						text="Referenznummer"	default=""	delete_if_empty="true" />
+				<check key="payment:coins"				text="Münzen"			default="off" />
+				<check key="payment:notes"				text="Banknoten"		default="off" />
+				<check key="payment:electronic_purses"	text="Geld-Karte"		default="off" />
+				<check key="payment:debit_cards"		text="EC/maestro-Karte"	default="off" />
+				<check key="payment:credit_cards"		text="Kreditkarte"		default="off" />
 			</item>
 		</group>
 		<group name="Line" de.name="Linie">
 			<item name="linevariant" de.name="Linienvariante" type="relation"  icon="presets/railway.png">
 				<label text="Linien Relation bearbeiten" />
-				<link href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema#Line_variant"
+                <link href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema#Line_variant"
 					  de.href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/%C3%96PNV-Schema#Linienvariante" />
 				<key   key="type"	value="line_variant" />
 				<text  key="from"	text="From"	de.text="Von"	default="" />
@@ -153,177 +180,107 @@
 				</optional>
 				<text  key="to"			text="To"						de.text="Nach"						default="" />
 				<check key="alternate"	text="Alternate"				de.text="Alternativer Linienweg"	default="off" />
-				<text  key="name"		text="Name"															default=""	delete_if_empty="true" />
-				<combo key="route"
-					   text="Kind of public transport"
-					   de.text="Verkehrkehrsmittel"
-					   values="bus,rail,light_rail,subway,monorail,tram,ferry"
-					   de.display_values="Bus,Eisenbahn,S-Bahn,U-Bahn,Einschienenbahn,Straßenbahn,Fähre"
-					   default=""
-					   delete_if_empty="true" />
-				<combo key="wheelchair"
-					   text="weelchair suitable"
-					   de.text="Rollstuhl geeignet"
-					   values="yes,no,limited,only"
-					   de.display_values="ja,nein,beschränkt,ausschließlich"
-					   default="" />
+                <text  key="name"		text="Name"															default=""	delete_if_empty="true" />
+				<combo key="route"		text="Kind of public transport"	de.text="Verkehrkehrsmittel" 		values="bus,rail,light_rail,subway,monorail,tram,ferry" de.display_values="Bus,Eisenbahn,S-Bahn,U-Bahn,Einschienenbahn,Straßenbahn,Fähre" default="" delete_if_empty="true" />
+				<combo key="wheelchair"	text="weelchair suitable"		de.text="Rollstuhl geeignet"		values="yes,no,limited,only"	de.display_values="ja,nein,beschränkt,ausschließlich"	default="" />
 			</item>
-			<item name="Busline" de.name="Buslinie" type="relation">
+            <item name="Busline" de.name="Buslinie" type="relation">
 				<label text="Bus-Linien Relation bearbeiten" />
-				<link href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema#Bus_lines_and_trolley_bus_lines"
+                <link href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema#Bus_lines_and_trolley_bus_lines"
 					  de.href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/%C3%96PNV-Schema#Bus-_und_Oberleitungsbuslinien" />
-				<key key="type" value="line" />
-				<key key="line" value="bus" />
-				<combo key="bus"
-					   text="Special-purpose"
-					   de.text="Spezieller Buslinienzweck"
-					   values="express, long_distance, on_demand, regular, school, shopping, shuttle, train_replacement, urban"
-					   de.display_values="Expressbus,Fernbus,Rufbus,Normal,Schulbus,Einkaufsbus,Shuttelservice,Ersatzverkehr,Stadtbus"
-					   default="" />
-				<combo key="service"
-					   text="particular frequent"
-					   de.text="Sonderfahrplan"
-					   values="busway, feeder, night, peak, weekend"
-					   de.display_values="Buslinie,Zubringerbus,Nachtbus,Berufsverkehr,Wochenendverkehr" />
-				<text key="ref" text="Ref" de.text="Liniennummer" default="" delete_if_empty="true" />
-				<text key="nat_ref" text="National ref." de.text="Nationale Liniennummer" default="" delete_if_empty="true" />
-				<text key="name" text="Name" default="" delete_if_empty="true" />
-				<text key="color" text="Color" de.text="Farbe" default="" delete_if_empty="true" />
-				<text key="text_color" text="Collor of text" de.text="Textfarbe" default="" delete_if_empty="true" />
-				<combo key="by_night"
-					   text="Service by night"
-					   de.text="Nachtverkehr"
-					   values="yes, no, only"
-					   de.display_values="ja,nein,ausschließlich"
-					   default=""
-					   delete_if_empty="true" />
-				<combo key="by_demand"
-				text="service on demand"
-				de.text="Rufbusverkehr"
-				values="yes, no, only"
-				de.display_values="ja,nein,ausschließlich"
-				default=""
-				delete_if_empty="true" />
-				<text key="operator" text="Operator" de.text="Betreiber" default="" delete_if_empty="true" />
-			</item>
-			<item name="Railwayline" de.name="Bahnlinie" type="relation">
+                <key key="type" value="line" />
+                <key key="line" value="bus" />
+                <combo key="bus" text="Special-purpose" de.text="Spezieller Buslinienzweck" values="express, long_distance, on_demand, regular, school, shopping, shuttle, train_replacement, urban" de.display_values="Expressbus,Fernbus,Rufbus,Normal,Schulbus,Einkaufsbus,Shuttelservice,Ersatzverkehr,Stadtbus" default="" />
+                <combo key="service" text="particular frequent" de.text="Sonderfahrplan" values="busway, feeder, night, peak, weekend" de.display_values="Buslinie,Zubringerbus,Nachtbus,Berufsverkehr,Wochenendverkehr" />
+                <text key="ref" text="Ref" de.text="Liniennummer" default="" delete_if_empty="true" />
+                <text key="nat_ref" text="National ref." de.text="Nationale Liniennummer" default="" delete_if_empty="true" />
+                <text key="name" text="Name" default="" delete_if_empty="true" />
+                <text key="color" text="Color" de.text="Farbe" default="" delete_if_empty="true" />
+                <text key="text_color" text="Collor of text" de.text="Textfarbe" default="" delete_if_empty="true" />
+                <combo key="by_night" text="Service by night" de.text="Nachtverkehr" values="yes, no, only" de.display_values="ja,nein,ausschließlich" default="" delete_if_empty="true" />
+                <combo key="by_demand" text="service on demand" de.text="Rufbusverkehr" values="yes, no, only" de.display_values="ja,nein,ausschließlich" default="" delete_if_empty="true" />
+                <text key="operator" text="Operator" de.text="Betreiber" default="" delete_if_empty="true" />
+            </item>
+            <item name="Railwayline" de.name="Bahnlinie" type="relation">
 				<label text="Bahn-Linien Relation bearbeiten" />
-				<link href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema#Rail_lines"
+                <link href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema#Rail_lines"
 					  de.href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/%C3%96PNV-Schema#Bahnlinien" />
-				<key key="type" value="line" />
-				<key key="line" value="rail" />
-				<combo key="service"
-					   text="Type of train"
-					   de.text="Zugart"
-					   values="high_speed, long_distance, regional, commuter"
-					   de.display_values="Hochgeschwindigkeitszug,Fernzug,Regionalzug,Vorortzug"
-					   default="" delete_if_empty="true" />
-				<text key="ref" text="Ref" de.text="Liniennummer" default="" delete_if_empty="true" />
-				<text key="nat_ref" text="National ref." de.text="Nationale Liniennummer" default="" delete_if_empty="true" />
-				<text key="name" text="Name" default="" delete_if_empty="true" />
-				<text key="color" text="Color" de.text="Farbe" default="" delete_if_empty="true" />
-				<text key="text_color" text="Collor of text" de.text="Textfarbe" default="" delete_if_empty="true" />
-				<combo key="by_night"
-					   text="Service by night"
-					   de.text="Nachtverkehr"
-					   values="yes, no, only"
-					   de.display_values="ja,nein,ausschließlich"
-					   default=""
-					   delete_if_empty="true" />
-				<text key="operator" text="Operator" de.text="Betreiber" default="" delete_if_empty="true" />
-			</item>
-			<item name="Ligthrailline" de.name="Stadtbahnlinie" type="relation">
+                <key key="type" value="line" />
+                <key key="line" value="rail" />
+                <combo key="service" text="Type of train" de.text="Zugart" values="high_speed, long_distance, regional, commuter" de.display_values="Hochgeschwindigkeitszug,Fernzug,Regionalzug,Vorortzug" default="" delete_if_empty="true" />
+                <text key="ref" text="Ref" de.text="Liniennummer" default="" delete_if_empty="true" />
+                <text key="nat_ref" text="National ref." de.text="Nationale Liniennummer" default="" delete_if_empty="true" />
+                <text key="name" text="Name" default="" delete_if_empty="true" />
+                <text key="color" text="Color" de.text="Farbe" default="" delete_if_empty="true" />
+                <text key="text_color" text="Collor of text" de.text="Textfarbe" default="" delete_if_empty="true" />
+                <combo key="by_night" text="Service by night" de.text="Nachtverkehr" values="yes, no, only" de.display_values="ja,nein,ausschließlich" default="" delete_if_empty="true" />
+                <text key="operator" text="Operator" de.text="Betreiber" default="" delete_if_empty="true" />
+            </item>
+            <item name="Ligthrailline" de.name="Stadtbahnlinie" type="relation">
 				<label text="Stadtbahn-Linien Relation bearbeiten" />
-				<link href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema#Light_rail_lines"
+                <link href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema#Light_rail_lines"
 					  de.href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/%C3%96PNV-Schema#Stadtbahnlinien" />
-				<key key="type" value="line" />
-				<key key="line" value="light_rail" />
-				<text key="ref" text="Ref" de.text="Liniennummer" default="" delete_if_empty="true" />
-				<text key="nat_ref" text="National ref." de.text="Nationale Liniennummer" default="" delete_if_empty="true" />
-				<text key="name" text="Name" default="" delete_if_empty="true" />
-				<text key="color" text="Color" de.text="Farbe" default="" delete_if_empty="true" />
-				<text key="text_color" text="Collor of text" de.text="Textfarbe" default="" delete_if_empty="true" />
-				<combo key="by_night"
-					   text="Service by night"
-					   de.text="Nachtverkehr"values="yes, no, only"
-					   de.display_values="ja,nein,ausschließlich"
-					   default=""
-					   delete_if_empty="true" />
-				<text key="operator" text="Operator" de.text="Betreiber" default="" delete_if_empty="true" />
-			</item>
-			<item name="Monorail or Subway" de.name="Stadtschnellbahnlinie" type="relation">
+                <key key="type" value="line" />
+                <key key="line" value="light_rail" />
+                <text key="ref" text="Ref" de.text="Liniennummer" default="" delete_if_empty="true" />
+                <text key="nat_ref" text="National ref." de.text="Nationale Liniennummer" default="" delete_if_empty="true" />
+                <text key="name" text="Name" default="" delete_if_empty="true" />
+                <text key="color" text="Color" de.text="Farbe" default="" delete_if_empty="true" />
+                <text key="text_color" text="Collor of text" de.text="Textfarbe" default="" delete_if_empty="true" />
+                <combo key="by_night" text="Service by night" de.text="Nachtverkehr" values="yes, no, only" de.display_values="ja,nein,ausschließlich" default="" delete_if_empty="true" />
+                <text key="operator" text="Operator" de.text="Betreiber" default="" delete_if_empty="true" />
+            </item>
+            <item name="Monorail or Subway" de.name="Stadtschnellbahnlinie" type="relation">
 				<label text="Stadtschnellbahn-Linien Relation bearbeiten" />
-				<link href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema#Metro_lines"
+                <link href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema#Metro_lines"
 					  de.href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/%C3%96PNV-Schema#Stadtschnellbahnlinien" />
-				<key key="type" value="line" />
-				<combo key="line"
-					   text="Schnellbahnlinie"
-					   values="subway, monorail"
-					   default=""
-					   delete_if_empty="true" />
-				<text key="ref" text="Ref" de.text="Liniennummer" default="" delete_if_empty="true" />
-				<text key="nat_ref" text="National ref." de.text="Nationale Liniennummer" default="" delete_if_empty="true" />
-				<text key="name" text="Name" default="" delete_if_empty="true" />
-				<text key="color" text="Color" de.text="Farbe" default="" delete_if_empty="true" />
-				<text key="text_color" text="Collor of text" de.text="Textfarbe" default="" delete_if_empty="true" />
-				<combo key="by_night"
-					   text="Service by night"
-					   de.text="Nachtverkehr"
-					   values="yes, no, only"
-					   de.display_values="ja,nein,ausschließlich"
-					   default=""
-					   delete_if_empty="true" />
-				<text key="operator" text="Operator" de.text="Betreiber" default="" delete_if_empty="true" />
-			</item>
-			<item name="Tramline" de.name="Straßenbahnlinien" type="relation">
+                <key key="type" value="line" />
+                <combo key="line" text="Schnellbahnlinie" values="subway, monorail" default="" delete_if_empty="true" />
+                <text key="ref" text="Ref" de.text="Liniennummer" default="" delete_if_empty="true" />
+                <text key="nat_ref" text="National ref." de.text="Nationale Liniennummer" default="" delete_if_empty="true" />
+                <text key="name" text="Name" default="" delete_if_empty="true" />
+                <text key="color" text="Color" de.text="Farbe" default="" delete_if_empty="true" />
+                <text key="text_color" text="Collor of text" de.text="Textfarbe" default="" delete_if_empty="true" />
+                <combo key="by_night" text="Service by night" de.text="Nachtverkehr" values="yes, no, only" de.display_values="ja,nein,ausschließlich" default="" delete_if_empty="true" />
+                <text key="operator" text="Operator" de.text="Betreiber" default="" delete_if_empty="true" />
+            </item>
+            <item name="Tramline" de.name="Straßenbahnlinien" type="relation">
 				<label text="Straßenbahn-Linien Relation bearbeiten" />
-				<link href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema#Tram_lines"
+                <link href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema#Tram_lines"
 					  de.href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/%C3%96PNV-Schema#Straޥnbahnlinien" />
-				<key key="type" value="line" />
-				<key key="line" value="tram" />
-				<text key="ref" text="Ref" de.text="Liniennummer" default="" delete_if_empty="true" />
-				<text key="nat_ref" text="National ref." de.text="Nationale Liniennummer" default="" delete_if_empty="true" />
-				<text key="name" text="Name" default="" delete_if_empty="true" />
-				<text key="color" text="Color" de.text="Farbe" default="" delete_if_empty="true" />
-				<text key="text_color" text="Collor of text" de.text="Textfarbe" default="" delete_if_empty="true" />
-				<combo key="by_night"
-					   text="Service by night"
-					   de.text="Nachtverkehr"
-					   values="yes, no, only"
-					   de.display_values="ja,nein,ausschließlich"
-					   default=""
-					   delete_if_empty="true" />
-				<text key="operator" text="Operator" de.text="Betreiber" default="" delete_if_empty="true" />
-			</item>
-			<item name="Ferryline" de.name="Personenfährlinien" type="relation">
+                <key key="type" value="line" />
+                <key key="line" value="tram" />
+                <text key="ref" text="Ref" de.text="Liniennummer" default="" delete_if_empty="true" />
+                <text key="nat_ref" text="National ref." de.text="Nationale Liniennummer" default="" delete_if_empty="true" />
+                <text key="name" text="Name" default="" delete_if_empty="true" />
+                <text key="color" text="Color" de.text="Farbe" default="" delete_if_empty="true" />
+                <text key="text_color" text="Collor of text" de.text="Textfarbe" default="" delete_if_empty="true" />
+                <combo key="by_night" text="Service by night" de.text="Nachtverkehr" values="yes, no, only" de.display_values="ja,nein,ausschließlich" default="" delete_if_empty="true" />
+                <text key="operator" text="Operator" de.text="Betreiber" default="" delete_if_empty="true" />
+            </item>
+            <item name="Ferryline" de.name="Personenfährlinien" type="relation">
 				<label text="Personenfähren-Linien Relation bearbeiten" />
-				<link href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema#Passenger_ferry_lines"
+                <link href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema#Passenger_ferry_lines"
 					  de.href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/%C3%96PNV-Schema#Personenf㧲linien" />
-				<key key="type" value="line" />
-				<key key="line" value="ferry" />
-				<text key="ref" text="Ref" de.text="Liniennummer" default="" delete_if_empty="true" />
-				<text key="nat_ref" text="National ref." de.text="Nationale Liniennummer" default="" delete_if_empty="true" />
-				<text key="name" text="Name" default="" delete_if_empty="true" />
-				<text key="color" text="Color" de.text="Farbe" default="" delete_if_empty="true" />
-				<text key="text_color" text="Collor of text" de.text="Textfarbe" default="" delete_if_empty="true" />
-				<combo key="by_night"
-					   text="Service by night"
-					   de.text="Nachtverkehr"
-					   values="yes, no, only"
-					   de.display_values="ja,nein,ausschließlich"
-					   default=""
-					   delete_if_empty="true" />
-				<text key="operator" text="Operator" de.text="Betreiber" default="" delete_if_empty="true" />
-			</item>
+                <key key="type" value="line" />
+                <key key="line" value="ferry" />
+                <text key="ref" text="Ref" de.text="Liniennummer" default="" delete_if_empty="true" />
+                <text key="nat_ref" text="National ref." de.text="Nationale Liniennummer" default="" delete_if_empty="true" />
+                <text key="name" text="Name" default="" delete_if_empty="true" />
+                <text key="color" text="Color" de.text="Farbe" default="" delete_if_empty="true" />
+                <text key="text_color" text="Collor of text" de.text="Textfarbe" default="" delete_if_empty="true" />
+                <combo key="by_night" text="Service by night" de.text="Nachtverkehr" values="yes, no, only" de.display_values="ja,nein,ausschließlich" default="" delete_if_empty="true" />
+                <text key="operator" text="Operator" de.text="Betreiber" default="" delete_if_empty="true" />
+            </item>
 		</group>
-		<group name="Networkinfomation" de.name="Netzinformation" >
-			<item name="Networkinformation" de.name="Netzinformation" type="relation">
+        <group name="Networkinfomation" de.name="Netzinformation" >
+            <item name="Networkinformation" de.name="Netzinformation" type="relation">
 				<label text="Netzinformation bearbeiten" />
-				<link href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema#Network_information_.28public_transport_networks.29" />
-				<key key="public_transport" value="network" />
-				<text key="name" text="Name" default="" delete_if_empty="true" />
-				<text key="abbreviation" text="Abbreviation" de.text="Abkürzung" default="" delete_if_empty="true" />
-			</item>
-		</group>
+                <link href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema#Network_information_.28public_transport_networks.29" />
+                <key key="public_transport" value="network" />
+                <text key="name" text="Name" default="" delete_if_empty="true" />
+                <text key="abbreviation" text="Abbreviation" de.text="Abkürzung" default="" delete_if_empty="true" />
+            </item>
+        </group>
 	</group>
 </annotations>
