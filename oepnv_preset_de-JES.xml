@@ -28,7 +28,7 @@
 				<check key="monorail"	text="Monorail"	  de.text="Einschienenbahn"	default="off"	delete_if_empty="true" />
 				<check key="tram"		text="Tram"		  de.text="Straßenbahn"		default="off"	delete_if_empty="true" />
 				<check key="funicular"	text="funicular"  de.text="Standseilbahn"	default="off"	delete_if_empty="true" />
-				<check key="aerialway"	text="aerialway"  de.text="Lufteilbahn"		default="off"	delete_if_empty="true" />
+				<check key="aerialway"	text="aerialway"  de.text="Luftseilbahn"	default="off"	delete_if_empty="true" />
 				<check key="ferry"		text="ferry"	  de.text="Personenfähre"	default="off"	delete_if_empty="true" />
 			</item>
 			<item name="Platform, Bus" de.name="Zugangsstelle, Bus" type="node,way,closedway" icon="presets/bus_halt.png">
@@ -63,7 +63,7 @@
 				<check key="monorail"		 text="Monorail"			de.text="Einschienenbahn"			default="off"	delete_if_empty="true" />
 				<check key="tram"			 text="Tram"				de.text="Straßenbahn"				default="off"	delete_if_empty="true" />
 				<check key="funicular"		 text="funicular"			de.text="Standseilbahn"				default="off"	delete_if_empty="true" />
-				<check key="aerialway"		 text="aerialway"			de.text="Lufteilbahn"				default="off"	delete_if_empty="true" />
+				<check key="aerialway"		 text="aerialway"			de.text="Luftseilbahn"				default="off"	delete_if_empty="true" />
 				<check key="ferry"			 text="ferry"				de.text="Personenfähre"				default="off"	delete_if_empty="true" />
 				-->
 				<combo key="electronic_info" text="electronic info" 	de.text="Elektronische Infotafel"	values="yes,no, 1,2,3"			de.display_values="ja,nein,1,2,3"	delete_if_empty="true" />
@@ -111,7 +111,7 @@
 				<check key="monorail"		 text="Monorail"			de.text="Einschienenbahn"			default="off"		delete_if_empty="true" />
 				<check key="tram"			 text="Tram"				de.text="Straßenbahn"				default="off"		delete_if_empty="true" />
 				<check key="funicular"		 text="funicular"			de.text="Standseilbahn"				default="off"		delete_if_empty="true" />
-				<check key="aerialway"		 text="aerialway"			de.text="Lufteilbahn"				default="off"		delete_if_empty="true" />
+				<check key="aerialway"		 text="aerialway"			de.text="Luftseilbahn"				default="off"		delete_if_empty="true" />
 				<check key="ferry"			 text="ferry"				de.text="Personenfähre"				default="off"		delete_if_empty="true" />
 				<check key="electronic_board" text="electronic info" 	de.text="Elektronische Infotafel"	default="off"		delete_if_empty="true" />
 				<combo key="highway"		 text="Elevator" 			de.text="Aufzug					"	values="persons,car"			de.display_values="Personen,Auto"		delete_if_empty="true" />
@@ -158,14 +158,14 @@
 					  de.href="http://wiki.openstreetmap.org/wiki/DE:Tag:amenity%3Dvending_machine" />
 				<key   key="amenity"					value="vending_machine" />
 				<key   key="vending"					value="public_transport_tickets" />
-				<text  key="name"						text="Name"				default=""	delete_if_empty="true" />
-				<text  key="operator"					text="Operator"			de.text="Betreiber" default=""	delete_if_empty="true" />
-				<text  key="ref"						text="Referenznummer"	default=""	delete_if_empty="true" />
-				<check key="payment:coins"				text="Münzen"			default="off" />
-				<check key="payment:notes"				text="Banknoten"		default="off" />
-				<check key="payment:electronic_purses"	text="Geld-Karte"		default="off" />
-				<check key="payment:debit_cards"		text="EC/maestro-Karte"	default="off" />
-				<check key="payment:credit_cards"		text="Kreditkarte"		default="off" />
+				<text  key="name"						text="Name"											default=""	delete_if_empty="true" />
+				<text  key="operator"					text="Operator"			de.text="Betreiber"			default=""	delete_if_empty="true" />
+				<text  key="ref"						text="Referenz"			de.text="Referenznummer"	default=""	delete_if_empty="true" />
+				<check key="payment:coins"				text="Coins"			de.text="Münzen"			default="off" />
+				<check key="payment:notes"				text="Banknote"			de.text="Banknoten"			default="off" />
+				<check key="payment:electronic_purses"	text="Money-Card"		de.text="Geld-Karte"		default="off" />
+				<check key="payment:debit_cards"		text="EC/maestro-Karte"								default="off" />
+				<check key="payment:credit_cards"		text="Credit-Card"		de.text="Kreditkarte"		default="off" />
 			</item>
 		</group>
 		<group name="Line" de.name="Linie">
@@ -173,12 +173,13 @@
 				<label text="Linien Relation bearbeiten" />
                 <link href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema#Line_variant"
 					  de.href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/%C3%96PNV-Schema#Linienvariante" />
-				<key   key="type"	value="line_variant" />
-				<text  key="from"	text="From"	de.text="Von"	default="" />
+				<text  key="network"	text="Network"					de.text="Verkehrverbund"					default="" />
+				<text  key="ref"		text="Referenz"					de.text="Referenz (A, B oder 1 ... 2 z.B.)"	default=""	delete_if_empty="true" />
+				<text  key="from"		text="From"						de.text="Von"								default="" />
+				<text  key="to"			text="To"						de.text="Nach"								default="" />
 				<optional>
 					<text key="via"	text="über"	delete_if_empty="true" />
 				</optional>
-				<text  key="to"			text="To"						de.text="Nach"						default="" />
 				<check key="alternate"	text="Alternate"				de.text="Alternativer Linienweg"	default="off" />
                 <text  key="name"		text="Name"															default=""	delete_if_empty="true" />
 				<combo key="route"		text="Kind of public transport"	de.text="Verkehrkehrsmittel" 		values="bus,rail,light_rail,subway,monorail,tram,ferry" de.display_values="Bus,Eisenbahn,S-Bahn,U-Bahn,Einschienenbahn,Straßenbahn,Fähre" default="" delete_if_empty="true" />
