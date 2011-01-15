@@ -26,7 +26,7 @@
 					<text key="uic_name"	text="UIC Name"				de.text="UIC Name des Betreibers"			use_last_as_default="true"	default=""	delete_if_empty="true" />
 					<combo key="operator"
 						   text="operator"
-						   de.text="Betreiber der Zugangsstelle"
+						   de.text="Betreiber der Halteposition"
 						   values="JES,JNV,JES;RVG,RVG"
 						   de.display_values="JES,JNV,JES;RVG,RVG,Schröder"
 						   use_last_as_default="true"
@@ -34,7 +34,7 @@
 					<combo key="network"
 						   text="Network"
 						   de.text="Netzwerk"
-						   values="JES,JNV,JES;RVG,RVG"
+						   values="VMT,JES,JNV,JES;RVG,RVG"
 						   de.display_values="JES,JNV,JES;RVG,RVG"
 						   use_last_as_default="true"
 						   default="JES" />
