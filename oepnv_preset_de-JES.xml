@@ -11,7 +11,7 @@
 				<check key="ferry"			 text="ferry"				de.text="Personenfähre"				default="off"	delete_if_empty="true" />
 				-->
 <annotations author="Marcus Koerner, Jan, Carsten Schoenert" version="0.3_2011-01-04" shortdescription="Public Transport Schema" de.shortdescription="OEPNV Schema" description="Public Transport presets" de.description="Vorlagen fuer OEPNV">
-	<group name="Public Transport" de.name="ÖPNV" icon="presets/bus.png" >
+	<group name="Public Transport" de.name="ÖPNV-VMT" icon="presets/bus.png" >
 		<group name="Stop" de.name="Haltestelle">
 			<item name="Stop Position" de.name="Halteposition" type="node" icon="presets/bus_small.png">
 				<label text="ÖPNV Halteposition bearbeiten" />
@@ -21,23 +21,16 @@
 				<key key="public_transport" value="stop_position" />
 				<text key="name" text="Name of the stop position" de.text="Name der Halteposition"  use_last_as_default="true" default="" delete_if_empty="true" />
 				<optional>
-					<text key="ref"			text="Referenz"				de.text="Referenz (A, B oder 1 ... 2 z.B.)"	use_last_as_default="true"	default=""	delete_if_empty="true" />
-					<text key="uic_ref"		text="UIC Rererenz"			de.text="UIC Nummer des Betreibers"			use_last_as_default="true"	default=""	delete_if_empty="true" />
-					<text key="uic_name"	text="UIC Name"				de.text="UIC Name des Betreibers"			use_last_as_default="true"	default=""	delete_if_empty="true" />
+					<text key="ref"			text="Referenz"				de.text="Referenz (A, B oder 1 ... 2 z.B.)"	use_last_as_default="true"	default=""		delete_if_empty="true" />
+					<text key="uic_ref"		text="UIC Rererenz"			de.text="UIC Nummer des Betreibers"			use_last_as_default="true"	default=""		delete_if_empty="true" />
+					<text key="uic_name"	text="UIC Name"				de.text="UIC Name des Betreibers"			use_last_as_default="true"	default=""		delete_if_empty="true" />
 					<combo key="operator"
 						   text="operator"
 						   de.text="Betreiber der Halteposition"
-						   values="JES,JNV,JES;RVG,RVG"
-						   de.display_values="JES,JNV,JES;RVG,RVG,Schröder"
+						   values="JES,JNV,JES;RVG,RVG,GVB,SWW,STB,TW,PVG,OVG,EVAG,Deutsche Bahn,EB"
 						   use_last_as_default="true"
 						   default="JES" />
-					<combo key="network"
-						   text="Network"
-						   de.text="Netzwerk"
-						   values="VMT,JES,JNV,JES;RVG,RVG"
-						   de.display_values="JES,JNV,JES;RVG,RVG"
-						   use_last_as_default="true"
-						   default="JES" />
+					<text key="network"	text="Network"					de.text="Netzwerk"							use_last_as_default="true"	default="VMT"	delete_if_empty="true" />
 				</optional>
 				<space />
 				<check key="bus" 		text="Bus"		  de.text="Bus"				default="on"	delete_if_empty="true" />
@@ -58,24 +51,18 @@
 				<key  key="public_transport"	value="platform" />
 				<key  key="bus"	value="yes" />
 				<key  key="highway"				value="bus_stop" />  <!--  <- this key/value is only for backward compatibility needed! -->
-				<text key="ref"			text="Referenz"				de.text="Referenz (A, B oder 1 ... 2 z.B.)"	use_last_as_default="true"	default=""	delete_if_empty="true" />
-				<text key="name"		text="Name of the platform"	de.text="Name des Bahnsteigs"				use_last_as_default="true"	default=""	delete_if_empty="true" />
-				<text key="uic_ref"		text="UIC Referenz"			de.text="UIC Nummer des Betreibers"			use_last_as_default="true"	default=""	delete_if_empty="true" />
-				<text key="uic_name"	text="UIC Name"				de.text="UIC Name des Betreibers"			use_last_as_default="true"	default=""	delete_if_empty="true" />
+				<text key="ref"			text="Referenz"				de.text="Referenz (A, B oder 1 ... 2 z.B.)"	use_last_as_default="true"	default=""		delete_if_empty="true" />
+				<text key="name"		text="Name of the platform"	de.text="Name des Haltestelle"				use_last_as_default="true"	default=""		delete_if_empty="true" />
+				<text key="uic_ref"		text="UIC Referenz"			de.text="UIC Nummer des Betreibers"			use_last_as_default="true"	default=""		delete_if_empty="true" />
+				<text key="uic_name"	text="UIC Name"				de.text="UIC Name des Betreibers"			use_last_as_default="true"	default=""		delete_if_empty="true" />
+				<text key="ref:VMT"		text="Operator Ref. Number"	de.text="Referenznummer des Betreibers"		use_last_as_default="true"	default=""		delete_if_empty="true" />
 				<combo key="operator"
 					   text="operator"
 					   de.text="Betreiber der Zugangsstelle"
-					   values="JES,JNV,JES;RVG,RVG"
-					   de.display_values="JES,JNV,JES;RVG,RVG,Schröder"
+					   values="JES,JNV,JES;RVG,RVG,GVB,SWW,STB,TW,PVG,OVG,EVAG,Deutsche Bahn,EB"
 					   use_last_as_default="true"
 					   default="JES" />
-				<combo key="network"
-					   text="Network"
-					   de.text="Netzwerk"
-					   values="JES,JNV,JES;RVG,RVG"
-					   de.display_values="JES,JNV,JES;RVG,RVG"
-					   use_last_as_default="true"
-					   default="JES" />
+				<text key="network"	text="Network"						de.text="Netzwerk"						use_last_as_default="true"	default="VMT"	delete_if_empty="true" />
 				<combo key="electronic_info" text="electronic info" 	de.text="Elektronische Infotafel"	values="yes,no, 1,2,3"			de.display_values="ja,nein,1,2,3"	delete_if_empty="true" />
 				<combo key="wheelchair"		 text="weelchair suitable"	de.text="Rollstuhl geeignet"		values="yes,no,limited,only"	de.display_values="ja,nein,beschränkt,ausschließlich"	default="" />
 				<space/>
