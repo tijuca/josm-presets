@@ -55,7 +55,7 @@
 				<text key="name"		text="Name of the platform"	de.text="Name des Haltestelle"				use_last_as_default="true"	default=""		delete_if_empty="true" />
 				<text key="uic_ref"		text="UIC Referenz"			de.text="UIC Nummer des Betreibers"			use_last_as_default="true"	default=""		delete_if_empty="true" />
 				<text key="uic_name"	text="UIC Name"				de.text="UIC Name des Betreibers"			use_last_as_default="true"	default=""		delete_if_empty="true" />
-				<text key="ref:VMT"		text="Operator Ref. Number"	de.text="Referenznummer des Betreibers"		use_last_as_default="true"	default=""		delete_if_empty="true" />
+				<text key="ref:VMT"		text="Operator Ref. Number"	de.text="Referenznummer des VMT"			use_last_as_default="true"	default=""		delete_if_empty="true" />
 				<combo key="operator"
 					   text="operator"
 					   de.text="Betreiber der Zugangsstelle"
@@ -119,6 +119,7 @@
 				<text key="name"		text="Name of the platform"	de.text="Name des Bahnsteigs"				use_last_as_default="true"	default=""	delete_if_empty="true" />
 				<text key="uic_ref"		text="UIC Referenz"			de.text="UIC Nummer des Betreibers"			use_last_as_default="true"	default=""	delete_if_empty="true" />
 				<text key="uic_name"	text="UIC Name"				de.text="UIC Name des Betreibers"			use_last_as_default="true"	default=""	delete_if_empty="true" />
+				<text key="ref:VMT"		text="Operator Ref. Number"	de.text="Referenznummer des VMT"			use_last_as_default="true"	default=""		delete_if_empty="true" />
 				<combo key="operator"
 					   text="operator"
 					   de.text="Betreiber der Zugangsstelle"
@@ -199,6 +200,7 @@
 				<text key="name"		text="Name of the platform"	de.text="Name des Bahnsteigs"				use_last_as_default="true"	default=""	delete_if_empty="true" />
 				<text key="uic_ref"		text="UIC Referenz"			de.text="UIC Nummer des Betreibers"			use_last_as_default="true"	default=""	delete_if_empty="true" />
 				<text key="uic_name"	text="UIC Name"				de.text="UIC Name des Betreibers"			use_last_as_default="true"	default=""	delete_if_empty="true" />
+				<text key="ref:VMT"		text="Operator Ref. Number"	de.text="Referenznummer des VMT"			use_last_as_default="true"	default=""	delete_if_empty="true" />
 				<combo key="operator"
 					   text="operator"
 					   de.text="Betreiber der Zugangsstelle"
