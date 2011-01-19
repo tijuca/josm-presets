@@ -82,6 +82,8 @@
 				<key  key="rail"				value="yes" />
 				<text key="ref"			text="Referenz"				de.text="Referenz (A, B oder 1 ... 2 z.B.)"	use_last_as_default="true"	default=""	delete_if_empty="true" />
 				<text key="name"		text="Name of the platform"	de.text="Name des Bahnsteigs"				use_last_as_default="true"	default=""	delete_if_empty="true" />
+				<space />
+				<link href="http://www.michaeldittrich.de/ibnr/online.php" />
 				<text key="uic_ref"		text="UIC Referenz"			de.text="UIC Nummer des Betreibers"			use_last_as_default="true"	default=""	delete_if_empty="true" />
 				<text key="uic_name"	text="UIC Name"				de.text="UIC Name des Betreibers"			use_last_as_default="true"	default=""	delete_if_empty="true" />
 				<combo key="operator"
@@ -119,7 +121,7 @@
 				<text key="name"		text="Name of the platform"	de.text="Name des Bahnsteigs"				use_last_as_default="true"	default=""	delete_if_empty="true" />
 				<text key="uic_ref"		text="UIC Referenz"			de.text="UIC Nummer des Betreibers"			use_last_as_default="true"	default=""	delete_if_empty="true" />
 				<text key="uic_name"	text="UIC Name"				de.text="UIC Name des Betreibers"			use_last_as_default="true"	default=""	delete_if_empty="true" />
-				<text key="ref:VMT"		text="Operator Ref. Number"	de.text="Referenznummer des VMT"			use_last_as_default="true"	default=""		delete_if_empty="true" />
+				<text key="ref:VMT"		text="Operator Ref. Number"	de.text="Referenznummer des VMT"			use_last_as_default="true"	default=""	delete_if_empty="true" />
 				<combo key="operator"
 					   text="operator"
 					   de.text="Betreiber der Zugangsstelle"
@@ -127,13 +129,7 @@
 					   de.display_values="Deutsche Bahn"
 					   use_last_as_default="true"
 					   default="JES" />
-				<combo key="network"
-					   text="Network"
-					   de.text="Netzwerk"
-					   values="JES,JNV,JES;RVG,RVG"
-					   de.display_values="JES,JNV,JES;RVG,RVG"
-					   use_last_as_default="true"
-					   default="JES" />
+				<text key="network"	text="Network"						de.text="Netzwerk"						use_last_as_default="true"	default="VMT"	delete_if_empty="true" />
 				<combo key="electronic_info" text="electronic info" 	de.text="Elektronische Infotafel"	values="yes,no, 1,2,3"			de.display_values="ja,nein,1,2,3"	delete_if_empty="true" />
 				<combo key="wheelchair"		 text="weelchair suitable"	de.text="Rollstuhl geeignet"		values="yes,no,limited,only"	de.display_values="ja,nein,beschränkt,ausschließlich"	default="" />
 				<space/>
@@ -155,6 +151,7 @@
 				<text key="name"		text="Name of the platform"	de.text="Name des Bahnsteigs"				use_last_as_default="true"	default=""	delete_if_empty="true" />
 				<text key="uic_ref"		text="UIC Referenz"			de.text="UIC Nummer des Betreibers"			use_last_as_default="true"	default=""	delete_if_empty="true" />
 				<text key="uic_name"	text="UIC Name"				de.text="UIC Name des Betreibers"			use_last_as_default="true"	default=""	delete_if_empty="true" />
+				<text key="ref:VMT"		text="Operator Ref. Number"	de.text="Referenznummer des VMT"			use_last_as_default="true"	default=""	delete_if_empty="true" />
 				<combo key="operator"
 					   text="operator"
 					   de.text="Betreiber der Zugangsstelle"
@@ -162,13 +159,7 @@
 					   de.display_values="Deutsche Bahn"
 					   use_last_as_default="true"
 					   default="JES" />
-				<combo key="network"
-					   text="Network"
-					   de.text="Netzwerk"
-					   values="JES,JNV,JES;RVG,RVG"
-					   de.display_values="JES,JNV,JES;RVG,RVG"
-					   use_last_as_default="true"
-					   default="JES" />
+				<text key="network"	text="Network"						de.text="Netzwerk"						use_last_as_default="true"	default="VMT"	delete_if_empty="true" />
 				<combo key="electronic_info"
 					   text="electronic info"
 					   de.text="Elektronische Infotafel"
@@ -208,13 +199,7 @@
 					   de.display_values="Deutsche Bahn"
 					   use_last_as_default="true"
 					   default="JES" />
-				<combo key="network"
-					   text="Network"
-					   de.text="Netzwerk"
-					   values="JES,JNV,JES;RVG,RVG"
-					   de.display_values="JES,JNV,JES;RVG,RVG"
-					   use_last_as_default="true"
-					   default="JES" />
+				<text key="network"	text="Network"						de.text="Netzwerk"						use_last_as_default="true"	default="VMT"	delete_if_empty="true" />
 				<combo key="electronic_info"
 					   text="electronic info"
 					   de.text="Elektronische Infotafel"
