@@ -10,6 +10,10 @@ Install:
 
 3. restart JOSM
 
-oepnv_preset_de-JES.xml:
-  Preset for public transport schema in the region of the "Saale-Holzland Kreis"
-  in Germany Thuringia.
+oepnv_preset_de-VMT.xml:
+  Preset for public transport schema especialy for the VMT in the region of 
+  Thuringia, Germany.
+  Tested and used in the administrative district of Saale-Holzland-Kreis and
+  in the city of Jena.
+  Probably there a some things inside still missing or wrong for use in other 
+  regions of the VMT.
