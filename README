@@ -17,3 +17,10 @@ oepnv_preset_de-VMT.xml:
   in the city of Jena.
   Probably there a some things inside still missing or wrong for use in other 
   regions of the VMT.
+ 
+oepnv_preset_de-VRS.xml:
+  Preset for public transport schema especialy for the VRS in the northern region of 
+  North Rhine Westphalia, Germany.
+  Not very tested yet.
+  Probably there a some things inside still missing or wrong for use in other 
+  regions of the VMT.
