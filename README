@@ -1,4 +1,5 @@
 * some few presets for easier working with JOSM (Java Openstreetmap Editor)
+http://josm.openstreetmap.de
 
 Install:
 1. copy the selected preset to a local directory in your profile,
@@ -11,16 +12,17 @@ Install:
 3. restart JOSM
 
 oepnv_preset_de-VMT.xml:
-  Preset for public transport schema especialy for the VMT in the region of 
-  Thuringia, Germany.
+  Preset for public transport schema especialy for the VMT in the region of Thuringia, Germany.
+  Web: http://www.vmt-thueringen.de/start.html
   Tested and used in the administrative district of Saale-Holzland-Kreis and
   in the city of Jena.
   Probably there a some things inside still missing or wrong for use in other 
   regions of the VMT.
  
 oepnv_preset_de-VRS.xml:
-  Preset for public transport schema especialy for the VRS in the northern region of 
+  Preset for public transport schema especialy for the VRS in the southern region of 
   North Rhine Westphalia, Germany.
+  Web: http://www.vrsinfo.de/der-vrs/organisation.html
   Not very tested yet.
   Probably there a some things inside still missing or wrong for use in other 
   regions of the VRS.
