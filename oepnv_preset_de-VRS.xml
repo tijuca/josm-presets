@@ -89,14 +89,12 @@
 					   de.text="Betreiber der Zugangsstelle"
 					   values="Deutsche Bahn"
 					   de.display_values="Deutsche Bahn"
-					   use_last_as_default="true"
-					   default="JES" />
+					   use_last_as_default="true" />
 				<combo key="network"
 					   text="Network"
 					   de.text="Netzwerk"
 					   values="BSM,BVR,Deutsche Bahn,DKB,Hellertalbahn,Hüttebräucker,KVB,Martin Becker,OVAG,REVG,RSVG,RVE,RVK,Schäfer,SBD,SVE,SWB,SW Brühl,SW Hürth,SWW,SZ,Ti,trans-regio,WWB,VBL,wupsi,Wiedenhoff"
-					   use_last_as_default="true"
-					   default="JES" />
+					   use_last_as_default="true" />
 				<combo key="electronic_info" text="electronic info" 	de.text="Elektronische Infotafel"	values="yes,no, 1,2,3"			de.display_values="ja,nein,1,2,3"	delete_if_empty="true" />
 				<combo key="wheelchair"		 text="weelchair suitable"	de.text="Rollstuhl geeignet"		values="yes,no,limited,only"	de.display_values="ja,nein,beschränkt,ausschließlich"	default="" />
 				<space/>
@@ -119,14 +117,13 @@
 				<text key="network"		text="Network"				de.text="Netzwerk"							use_last_as_default="true"	default="VRS"	delete_if_empty="true" />
 				<text key="uic_ref"		text="UIC Referenz"			de.text="UIC Nummer des Betreibers"			use_last_as_default="true"	default=""	delete_if_empty="true" />
 				<text key="uic_name"	text="UIC Name"				de.text="UIC Name des Betreibers"			use_last_as_default="true"	default=""	delete_if_empty="true" />
-				<text key="ref:VMT"		text="Operator Ref. Number"	de.text="Referenznummer des VMT"			use_last_as_default="true"	default=""	delete_if_empty="true" />
+				<text key="ref:VRS"		text="Operator Ref. Number"	de.text="Referenznummer des VRS"			use_last_as_default="true"	default=""	delete_if_empty="true" />
 				<combo key="operator"
 					   text="operator"
 					   de.text="Betreiber der Zugangsstelle"
 					   values="Deutsche Bahn"
 					   de.display_values="KVB,SWB"
-					   use_last_as_default="true"
-					   default="JES" />
+					   use_last_as_default="true" />
 				<combo key="electronic_info" text="electronic info" 	de.text="Elektronische Infotafel"	values="yes,no, 1,2,3"			de.display_values="ja,nein,1,2,3"	delete_if_empty="true" />
 				<combo key="wheelchair"		 text="weelchair suitable"	de.text="Rollstuhl geeignet"		values="yes,no,limited,only"	de.display_values="ja,nein,beschränkt,ausschließlich"	default="" />
 				<space/>
@@ -149,7 +146,7 @@
 				<text key="network"		text="Network"				de.text="Netzwerk"							use_last_as_default="true"	default="VRS"	delete_if_empty="true" />
 				<text key="uic_ref"		text="UIC Referenz"			de.text="UIC Nummer des Betreibers"			use_last_as_default="true"	default=""	delete_if_empty="true" />
 				<text key="uic_name"	text="UIC Name"				de.text="UIC Name des Betreibers"			use_last_as_default="true"	default=""	delete_if_empty="true" />
-				<text key="ref:VMT"		text="Operator Ref. Number"	de.text="Referenznummer des VMT"			use_last_as_default="true"	default=""	delete_if_empty="true" />
+				<text key="ref:VRS"		text="Operator Ref. Number"	de.text="Referenznummer des VRS"			use_last_as_default="true"	default=""	delete_if_empty="true" />
 				<combo key="operator"
 					   text="operator"
 					   de.text="Betreiber der Zugangsstelle"
@@ -183,18 +180,17 @@
 				<key  key="public_transport"	value="platform" />
 				<key  key="railway"				value="platform" />
 				<key  key="tram"				value="yes" />
-				<text key="ref"			text="Referenz"				de.text="Referenz (A, B oder 1 ... 2 z.B.)"	use_last_as_default="true"	default=""	delete_if_empty="true" />
-				<text key="name"		text="Name of the platform"	de.text="Name des Bahnsteigs"				use_last_as_default="true"	default=""	delete_if_empty="true" />
+				<text key="ref"			text="Referenz"				de.text="Referenz (A, B oder 1 ... 2 z.B.)"	use_last_as_default="true"	default=""		delete_if_empty="true" />
+				<text key="name"		text="Name of the platform"	de.text="Name des Bahnsteigs"				use_last_as_default="true"	default=""		delete_if_empty="true" />
 				<text key="network"		text="Network"				de.text="Netzwerk"							use_last_as_default="true"	default="VRS"	delete_if_empty="true" />
-				<text key="uic_ref"		text="UIC Referenz"			de.text="UIC Nummer des Betreibers"			use_last_as_default="true"	default=""	delete_if_empty="true" />
-				<text key="uic_name"	text="UIC Name"				de.text="UIC Name des Betreibers"			use_last_as_default="true"	default=""	delete_if_empty="true" />
-				<text key="ref:VMT"		text="Operator Ref. Number"	de.text="Referenznummer des VMT"			use_last_as_default="true"	default=""	delete_if_empty="true" />
+				<text key="uic_ref"		text="UIC Referenz"			de.text="UIC Nummer des Betreibers"			use_last_as_default="true"	default=""		delete_if_empty="true" />
+				<text key="uic_name"	text="UIC Name"				de.text="UIC Name des Betreibers"			use_last_as_default="true"	default=""		delete_if_empty="true" />
+				<text key="ref:VRS"		text="Operator Ref. Number"	de.text="Referenznummer des VRS"			use_last_as_default="true"	default=""		delete_if_empty="true" />
 				<combo key="operator"
 					   text="operator"
 					   de.text="Betreiber der Zugangsstelle"
 					   values="BSM,BVR,Deutsche Bahn,DKB,Hellertalbahn,Hüttebräucker,KVB,Martin Becker,OVAG,REVG,RSVG,RVE,RVK,Schäfer,SBD,SVE,SWB,SW Brühl,SW Hürth,SWW,SZ,Ti,trans-regio,WWB,VBL,wupsi,Wiedenhoff"
-					   use_last_as_default="true"
-					   default="JES" />
+					   use_last_as_default="true" />
 				<combo key="electronic_info"
 					   text="electronic info"
 					   de.text="Elektronische Infotafel"
@@ -279,18 +275,16 @@
 				<key key="type" value="public_transport" />
 				<key key="public_transport" value="stop_area" />
 				<text key="ref" text="Ref" de.text="Identifikationsnummer" default="" delete_if_empty="true" />
-				<combo key="name"
-					   text="name of the stop position"
-					   de.text="Name der Halteposition"
-					   values="one,two,three"
-					   de.display_values="St. Gangloff\, Schule,St. Gangloff\, Platz der Einheit,Hermsdorf\, Schule"
-					   use_last_as_default="true"
-					   default="" />
+				<key key="name"
+					 text="name of the stop position"
+					 de.text="Name der Halteposition"
+					 use_last_as_default="true"
+					 default="" />
 			    <combo key="operator"
-					   text="Betreiber der Zugangsposition"
-					   values="JES,JNV,RVG,JES;RVG"
-					   default="JES"
-					   delete_if_empty="true" />
+					   text="operator"
+					   de.text="Betreiber der Zugangsstelle"
+					   values="BSM,BVR,Deutsche Bahn,DKB,Hellertalbahn,Hüttebräucker,KVB,Martin Becker,OVAG,REVG,RSVG,RVE,RVK,Schäfer,SBD,SVE,SWB,SW Brühl,SW Hürth,SWW,SZ,Ti,trans-regio,WWB,VBL,wupsi,Wiedenhoff"
+					   use_last_as_default="true" />
 		  </item>
 			<item name="Stop Area Ground" de.name="Gesamthalt-Gruppe" type="relation">
 				<label text="Gesamthalt Gruppen Relation bearbeiten" />
