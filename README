@@ -1,5 +1,6 @@
 * some few presets for easier working with JOSM (Java Openstreetmap Editor)
-http://josm.openstreetmap.de
+  see http://josm.openstreetmap.de
+* only working with version greater or equal svn3792
 
 Install:
 1. copy the selected preset to a local directory in your profile,

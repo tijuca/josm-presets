@@ -10,7 +10,7 @@
 				<check key="aerialway"		 text="aerialway"			de.text="Luftseilbahn"				default="off"	delete_if_empty="true" />
 				<check key="ferry"			 text="ferry"				de.text="Personenfähre"				default="off"	delete_if_empty="true" />
 				-->
-<annotations author="Marcus Koerner, Jan, Carsten Schoenert" version="0.3_2011-01-28" shortdescription="Public Transport Schema" de.shortdescription="OEPNV Schema" description="Public Transport presets" de.description="Vorlagen fuer OEPNV">
+<annotations author="Marcus Koerner, Jan, Carsten Schoenert" version="2011-01-30" shortdescription="Public Transport Schema" de.shortdescription="OEPNV Schema" description="Public Transport Preset for VRS" de.description="OEPNV Vorlage für VRS">
 	<group name="Public Transport" de.name="ÖPNV-VRS" icon="presets/bus.png" >
 		<group name="Stop" de.name="Haltestelle">
 			<item name="Stop Position" de.name="Halteposition" type="node" icon="presets/bus_small.png">
@@ -19,18 +19,17 @@
 				<link href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema#Stop_position"
 					  de.href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/%C3%96PNV-Schema#Halteposition" />
 				<key key="public_transport" value="stop_position" />
-				<text key="name" text="Name of the stop position" de.text="Name der Halteposition"  use_last_as_default="true" default="" delete_if_empty="true" />
+				<text key="name"			text="Name of the stop position"	de.text="Name der Halteposition"			use_last_as_default="true"	default=""		delete_if_empty="true" />
+				<text key="network"			text="Network"						de.text="Netzwerk"							use_last_as_default="true"	default="VRS"	delete_if_empty="true" />
 				<optional>
-					<text key="ref"			text="Referenz"				de.text="Referenz (A, B oder 1 ... 2 z.B.)"	use_last_as_default="true"	default=""		delete_if_empty="true" />
-					<text key="uic_ref"		text="UIC Rererenz"			de.text="UIC Nummer des Betreibers"			use_last_as_default="true"	default=""		delete_if_empty="true" />
-					<text key="uic_name"	text="UIC Name"				de.text="UIC Name des Betreibers"			use_last_as_default="true"	default=""		delete_if_empty="true" />
-					<combo key="operator"
+					<text key="ref"			text="Referenz"						de.text="Referenz (A, B oder 1 ... 2 z.B.)"	use_last_as_default="true"	default=""		delete_if_empty="true" />
+					<text key="uic_ref"		text="UIC Rererenz"					de.text="UIC Nummer des Betreibers"			use_last_as_default="true"	default=""		delete_if_empty="true" />
+					<text key="uic_name"	text="UIC Name"						de.text="UIC Name des Betreibers"			use_last_as_default="true"	default=""		delete_if_empty="true" />
+					<multiselect key="operator"	deliminter=","
 						   text="operator"
 						   de.text="Betreiber der Halteposition"
-						   values="BSM,BVR,Deutsche Bahn,DKB,Hellertalbahn,Hüttebräucker,KVB,Martin Becker,OVAG,REVG,RSVG,RVE,RVK,Schäfer,SBD,SVE,SWB,SW Brühl,SW Hürth,SWW,SZ,Ti,trans-regio,WWB,VBL,wupsi,Wiedenhoff"
-						   use_last_as_default="true"
-						   default="JES" />
-					<text key="network"	text="Network"					de.text="Netzwerk"							use_last_as_default="true"	default="VMT"	delete_if_empty="true" />
+						   values="BSM,BVR,Deutsche Bahn,DKB,Hellertalbahn,Hüttebräucker,KVB,Martin Becker,OVAG,REVG,RSVG,RVE,RVK,Schäfer,SBD,SVE,SWB,SW Brühl,SW Hürth,SWW,SZ,Ti,trans-regio,WWB,VBL,wupsi,Wiedenhoff,KVB;SWB"
+						   use_last_as_default="true" />
 				</optional>
 				<space />
 				<check key="bus" 		text="Bus"		  de.text="Bus"				default="on"	delete_if_empty="true" />
@@ -53,16 +52,15 @@
 				<key  key="highway"				value="bus_stop" />  <!--  <- this key/value is only for backward compatibility needed! -->
 				<text key="ref"			text="Referenz"				de.text="Referenz (A, B oder 1 ... 2 z.B.)"	use_last_as_default="true"	default=""		delete_if_empty="true" />
 				<text key="name"		text="Name of the platform"	de.text="Name des Haltestelle"				use_last_as_default="true"	default=""		delete_if_empty="true" />
+				<text key="network"		text="Network"				de.text="Netzwerk"							use_last_as_default="true"	default="VRS"	delete_if_empty="true" />
 				<text key="uic_ref"		text="UIC Referenz"			de.text="UIC Nummer des Betreibers"			use_last_as_default="true"	default=""		delete_if_empty="true" />
 				<text key="uic_name"	text="UIC Name"				de.text="UIC Name des Betreibers"			use_last_as_default="true"	default=""		delete_if_empty="true" />
 				<text key="ref:VRS"		text="Operator Ref. Number"	de.text="Referenznummer des VRS"			use_last_as_default="true"	default=""		delete_if_empty="true" />
-				<combo key="operator"
-					   text="operator"
-					   de.text="Betreiber der Zugangsstelle"
-					   values="BSM,BVR,Deutsche Bahn,DKB,Hellertalbahn,Hüttebräucker,KVB,Martin Becker,OVAG,REVG,RSVG,RVE,RVK,Schäfer,SBD,SVE,SWB,SW Brühl,SW Hürth,SWW,SZ,Ti,trans-regio,WWB,VBL,wupsi,Wiedenhoff"
-					   use_last_as_default="true"
-					   default="JES" />
-				<text key="network"	text="Network"						de.text="Netzwerk"						use_last_as_default="true"	default="VMT"	delete_if_empty="true" />
+				<multiselect key="operator"	deliminter=","
+						   text="operator"
+						   de.text="Betreiber der Zugangsstelle"
+						   values="BSM,BVR,Deutsche Bahn,DKB,Hellertalbahn,Hüttebräucker,KVB,Martin Becker,OVAG,REVG,RSVG,RVE,RVK,Schäfer,SBD,SVE,SWB,SW Brühl,SW Hürth,SWW,SZ,Ti,trans-regio,WWB,VBL,wupsi,Wiedenhoff,KVB;SWB"
+						   use_last_as_default="true" />
 				<combo key="electronic_info" text="electronic info" 	de.text="Elektronische Infotafel"	values="yes,no, 1,2,3"			de.display_values="ja,nein,1,2,3"	delete_if_empty="true" />
 				<combo key="wheelchair"		 text="weelchair suitable"	de.text="Rollstuhl geeignet"		values="yes,no,limited,only"	de.display_values="ja,nein,beschränkt,ausschließlich"	default="" />
 				<space/>
@@ -115,9 +113,10 @@
 					  de.href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/%C3%96PNV-Schema#Zugangsstelle" />
 				<key  key="public_transport"	value="platform" />
 				<key  key="railway"				value="platform" />
-				<key  key="light_rail"				value="yes" />
+				<key  key="light_rail"			value="yes" />
 				<text key="ref"			text="Referenz"				de.text="Referenz (A, B oder 1 ... 2 z.B.)"	use_last_as_default="true"	default=""	delete_if_empty="true" />
 				<text key="name"		text="Name of the platform"	de.text="Name des Bahnsteigs"				use_last_as_default="true"	default=""	delete_if_empty="true" />
+				<text key="network"		text="Network"				de.text="Netzwerk"							use_last_as_default="true"	default="VRS"	delete_if_empty="true" />
 				<text key="uic_ref"		text="UIC Referenz"			de.text="UIC Nummer des Betreibers"			use_last_as_default="true"	default=""	delete_if_empty="true" />
 				<text key="uic_name"	text="UIC Name"				de.text="UIC Name des Betreibers"			use_last_as_default="true"	default=""	delete_if_empty="true" />
 				<text key="ref:VMT"		text="Operator Ref. Number"	de.text="Referenznummer des VMT"			use_last_as_default="true"	default=""	delete_if_empty="true" />
@@ -128,7 +127,6 @@
 					   de.display_values="KVB,SWB"
 					   use_last_as_default="true"
 					   default="JES" />
-				<text key="network"	text="Network"						de.text="Netzwerk"						use_last_as_default="true"	default="VMT"	delete_if_empty="true" />
 				<combo key="electronic_info" text="electronic info" 	de.text="Elektronische Infotafel"	values="yes,no, 1,2,3"			de.display_values="ja,nein,1,2,3"	delete_if_empty="true" />
 				<combo key="wheelchair"		 text="weelchair suitable"	de.text="Rollstuhl geeignet"		values="yes,no,limited,only"	de.display_values="ja,nein,beschränkt,ausschließlich"	default="" />
 				<space/>
@@ -148,6 +146,7 @@
 				<key  key="subway"				value="yes" />
 				<text key="ref"			text="Referenz"				de.text="Referenz (A, B oder 1 ... 2 z.B.)"	use_last_as_default="true"	default=""	delete_if_empty="true" />
 				<text key="name"		text="Name of the platform"	de.text="Name des Bahnsteigs"				use_last_as_default="true"	default=""	delete_if_empty="true" />
+				<text key="network"		text="Network"				de.text="Netzwerk"							use_last_as_default="true"	default="VRS"	delete_if_empty="true" />
 				<text key="uic_ref"		text="UIC Referenz"			de.text="UIC Nummer des Betreibers"			use_last_as_default="true"	default=""	delete_if_empty="true" />
 				<text key="uic_name"	text="UIC Name"				de.text="UIC Name des Betreibers"			use_last_as_default="true"	default=""	delete_if_empty="true" />
 				<text key="ref:VMT"		text="Operator Ref. Number"	de.text="Referenznummer des VMT"			use_last_as_default="true"	default=""	delete_if_empty="true" />
@@ -156,9 +155,7 @@
 					   de.text="Betreiber der Zugangsstelle"
 					   values="Deutsche Bahn"
 					   de.display_values="Deutsche Bahn"
-					   use_last_as_default="true"
-					   default="JES" />
-				<text key="network"	text="Network"						de.text="Netzwerk"						use_last_as_default="true"	default="VMT"	delete_if_empty="true" />
+					   use_last_as_default="true" />
 				<combo key="electronic_info"
 					   text="electronic info"
 					   de.text="Elektronische Infotafel"
@@ -188,6 +185,7 @@
 				<key  key="tram"				value="yes" />
 				<text key="ref"			text="Referenz"				de.text="Referenz (A, B oder 1 ... 2 z.B.)"	use_last_as_default="true"	default=""	delete_if_empty="true" />
 				<text key="name"		text="Name of the platform"	de.text="Name des Bahnsteigs"				use_last_as_default="true"	default=""	delete_if_empty="true" />
+				<text key="network"		text="Network"				de.text="Netzwerk"							use_last_as_default="true"	default="VRS"	delete_if_empty="true" />
 				<text key="uic_ref"		text="UIC Referenz"			de.text="UIC Nummer des Betreibers"			use_last_as_default="true"	default=""	delete_if_empty="true" />
 				<text key="uic_name"	text="UIC Name"				de.text="UIC Name des Betreibers"			use_last_as_default="true"	default=""	delete_if_empty="true" />
 				<text key="ref:VMT"		text="Operator Ref. Number"	de.text="Referenznummer des VMT"			use_last_as_default="true"	default=""	delete_if_empty="true" />
@@ -197,7 +195,6 @@
 					   values="BSM,BVR,Deutsche Bahn,DKB,Hellertalbahn,Hüttebräucker,KVB,Martin Becker,OVAG,REVG,RSVG,RVE,RVK,Schäfer,SBD,SVE,SWB,SW Brühl,SW Hürth,SWW,SZ,Ti,trans-regio,WWB,VBL,wupsi,Wiedenhoff"
 					   use_last_as_default="true"
 					   default="JES" />
-				<text key="network"	text="Network"						de.text="Netzwerk"						use_last_as_default="true"	default="VMT"	delete_if_empty="true" />
 				<combo key="electronic_info"
 					   text="electronic info"
 					   de.text="Elektronische Infotafel"
