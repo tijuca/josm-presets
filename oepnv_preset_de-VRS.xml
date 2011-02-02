@@ -266,7 +266,7 @@
 				<check key="payment:credit_cards"		text="Credit-Card"		de.text="Kreditkarte"		default="off" />
 			</item>
 		</group>
-		<group name="Stop Areas" de.name="Gesamthalt">
+		<group name="Stop Area" de.name="Gesamthalt">
 			<item name="Stop Area" de.name="Gesamthalt" type="relation">
 				<label text="Gesamthalt Relation bearbeiten" />
 				<space/>
@@ -274,13 +274,9 @@
 					  de.href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/%C3%96PNV-Schema#Gesamthalt" />
 				<key key="type" value="public_transport" />
 				<key key="public_transport" value="stop_area" />
-				<text key="ref" text="Ref" de.text="Identifikationsnummer" default="" delete_if_empty="true" />
-				<key key="name"
-					 text="name of the stop position"
-					 de.text="Name der Halteposition"
-					 use_last_as_default="true"
-					 default="" />
-			    <combo key="operator"
+				<text key="ref"	text="Ref"				de.text="Identifikationsnummer"		default=""			delete_if_empty="true" />
+				<key key="name"	 text="Name of the stop position"	de.text="Name der Halteposition"	use_last_as_default="true" />
+				<combo key="operator"
 					   text="operator"
 					   de.text="Betreiber der Zugangsstelle"
 					   values="BSM,BVR,Deutsche Bahn,DKB,Hellertalbahn,Hüttebräucker,KVB,Martin Becker,OVAG,REVG,RSVG,RVE,RVK,Schäfer,SBD,SVE,SWB,SW Brühl,SW Hürth,SWW,SZ,Ti,trans-regio,WWB,VBL,wupsi,Wiedenhoff"
@@ -301,16 +297,16 @@
 				<label text="Linien Relation bearbeiten" />
 				<link href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema#Line_variant"
 					  de.href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/%C3%96PNV-Schema#Linienvariante" />
-				<text  key="network"	text="Network"					de.text="Verkehrverbund"					default="" />
-				<text  key="ref"		text="Referenz"					de.text="Referenz (A, B oder 1 ... 2 z.B.)"	default=""	delete_if_empty="true" />
-				<text  key="from"		text="From"						de.text="Von"								default="" />
-				<text  key="to"			text="To"						de.text="Nach"								default="" />
+				<text  key="network"	text="Network"				de.text="Verkehrverbund"					default="" />
+				<text  key="ref"	text="Referenz"				de.text="Referenz (A, B oder 1 ... 2 z.B.)"	default=""	delete_if_empty="true" />
+				<text  key="from"	text="From"				de.text="Von"								default="" />
+				<text  key="to"		text="To"				de.text="Nach"								default="" />
 				<optional>
 					<text key="via"	text="über"	delete_if_empty="true" />
 				</optional>
-				<check key="alternate"	text="Alternate"				de.text="Alternativer Linienweg"	default="off" />
-				<text  key="name"		text="Name"															default=""	delete_if_empty="true" />
-				<combo key="route"		text="Kind of public transport"	de.text="Verkehrkehrsmittel" 		values="bus,rail,light_rail,subway,monorail,tram,ferry" de.display_values="Bus,Eisenbahn,S-Bahn,U-Bahn,Einschienenbahn,Straßenbahn,Fähre" default="" delete_if_empty="true" />
+				<check key="alternate"	text="Alternate"			de.text="Alternativer Linienweg"	default="off" />
+				<text  key="name"	text="Name"															default=""	delete_if_empty="true" />
+				<combo key="route"	text="Kind of public transport"		de.text="Verkehrkehrsmittel" 		values="bus,rail,light_rail,subway,monorail,tram,ferry" de.display_values="Bus,Eisenbahn,S-Bahn,U-Bahn,Einschienenbahn,Straßenbahn,Fähre" default="" delete_if_empty="true" />
 				<combo key="wheelchair"	text="weelchair suitable"		de.text="Rollstuhl geeignet"		values="yes,no,limited,only"	de.display_values="ja,nein,beschränkt,ausschließlich"	default="" />
 			</item>
 			<item name="Busline" de.name="Buslinie" type="relation">
