@@ -275,7 +275,7 @@
 				<key key="type" value="public_transport" />
 				<key key="public_transport" value="stop_area" />
 				<text key="ref"	text="Ref"				de.text="Identifikationsnummer"		default=""			delete_if_empty="true" />
-				<key key="name"	 text="Name of the stop position"	de.text="Name der Halteposition"	use_last_as_default="true" />
+				<text key key="name"	 text="Name of the stop position"	de.text="Name der Halteposition"	use_last_as_default="true" />
 				<combo key="operator"
 					   text="operator"
 					   de.text="Betreiber der Zugangsstelle"
