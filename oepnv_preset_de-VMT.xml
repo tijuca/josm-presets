@@ -19,13 +19,13 @@
 				<link href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/Public_transport_schema#Stop_position"
 					  de.href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/%C3%96PNV-Schema#Halteposition" />
 				<key key="public_transport" value="stop_position" />
-				<text key="name" text="Name of the stop position"	de.text="Name der Halteposition"			use_last_as_default="true"	default=""		delete_if_empty="true" />
-				<text key="network"	text="Network"					de.text="Netzwerk"							use_last_as_default="true"	default="VMT"	delete_if_empty="true" />
+				<text key="name"			text="Name of the stop position"	de.text="Name der Halteposition"			use_last_as_default="true"	default=""		delete_if_empty="true" />
+				<text key="network"			text="Network"						de.text="Netzwerk"							use_last_as_default="true"	default="VMT"	delete_if_empty="true" />
 				<optional>
-					<text key="ref"			text="Referenz"				de.text="Referenz (A, B oder 1 ... 2 z.B.)"	use_last_as_default="true"	default=""		delete_if_empty="true" />
-					<text key="uic_ref"		text="UIC Rererenz"			de.text="UIC Nummer des Betreibers"			use_last_as_default="true"	default=""		delete_if_empty="true" />
-					<text key="uic_name"	text="UIC Name"				de.text="UIC Name des Betreibers"			use_last_as_default="true"	default=""		delete_if_empty="true" />
-					<multiselect key="operator" delimiter=","
+					<text key="ref"			text="Referenz"						de.text="Referenz (A, B oder 1 ... 2 z.B.)"	use_last_as_default="true"	default=""		delete_if_empty="true" />
+					<text key="uic_ref"		text="UIC Rererenz"					de.text="UIC Nummer des Betreibers"			use_last_as_default="true"	default=""		delete_if_empty="true" />
+					<text key="uic_name"	text="UIC Name"						de.text="UIC Name des Betreibers"			use_last_as_default="true"	default=""		delete_if_empty="true" />
+					<multiselect key="operator"	delimiter=","
 						   text="operator"
 						   de.text="Betreiber der Halteposition"
 						   values="EB,EVAG,GVB,JES,JNV,OVW,PVA,RVG,SWW,STB,TW,VAS,VAS;JES,JNV;JES,RVG;JES,VAS;RVG,Deutsche Bahn"
@@ -52,15 +52,15 @@
 				<key  key="highway"				value="bus_stop" />  <!--  <- this key/value is only for backward compatibility needed! -->
 				<text key="ref"			text="Referenz"				de.text="Referenz (A, B oder 1 ... 2 z.B.)"	use_last_as_default="true"	default=""		delete_if_empty="true" />
 				<text key="name"		text="Name of the platform"	de.text="Name des Haltestelle"				use_last_as_default="true"	default=""		delete_if_empty="true" />
+				<text key="network"		text="Network"				de.text="Netzwerk"							use_last_as_default="true"	default="VMT"	delete_if_empty="true" />
 				<text key="uic_ref"		text="UIC Referenz"			de.text="UIC Nummer des Betreibers"			use_last_as_default="true"	default=""		delete_if_empty="true" />
 				<text key="uic_name"	text="UIC Name"				de.text="UIC Name des Betreibers"			use_last_as_default="true"	default=""		delete_if_empty="true" />
 				<text key="ref:VMT"		text="Operator Ref. Number"	de.text="Referenznummer des VMT"			use_last_as_default="true"	default=""		delete_if_empty="true" />
-				<multiselect key="operator" delimiter=","
+				<multiselect key="operator"	delimiter=","
 						   text="operator"
 						   de.text="Betreiber der Halteposition"
 						   values="EB,EVAG,GVB,JES,JNV,OVW,PVA,RVG,SWW,STB,TW,VAS,VAS;JES,JNV;JES,RVG;JES,VAS;RVG,Deutsche Bahn"
 						   use_last_as_default="true" />
-				<text key="network"	text="Network"						de.text="Netzwerk"						use_last_as_default="true"	default="VMT"	delete_if_empty="true" />
 				<combo key="electronic_info" text="electronic info" 	de.text="Elektronische Infotafel"	values="yes,no, 1,2,3"			de.display_values="ja,nein,1,2,3"	delete_if_empty="true" />
 				<combo key="wheelchair"		 text="weelchair suitable"	de.text="Rollstuhl geeignet"		values="yes,no,limited,only"	de.display_values="ja,nein,beschränkt,ausschließlich"	default="" />
 				<space/>
