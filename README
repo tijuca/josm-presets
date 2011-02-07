@@ -3,14 +3,23 @@
 * only working with version greater or equal svn3792
 
 Install:
-1. copy the selected preset to a local directory in your profile,
-   on Windows7 like "C:/User and Settings/$USERNAME/josm-presets",
-   in Linux like /home/$USER/.josm/presets
+1. there a two possibilities
+1.a  Install localy
+     * copy the selected preset to a local directory in your profile,
+      on Windows7 like "C:/User and Settings/$USERNAME/josm-presets",
+      in Linux like /home/$USER/.josm/presets
 
-2. activate this preset in JOSM -> Edits -> Preferences (or short, press F12) -> Map Settings,
-   open the folder "Tagging Presets and add the preset to the field "Active styles"
+     Insert into JOSM as a local file
+     * activate this preset in JOSM -> Edits -> Preferences (or short, press F12) -> Map Settings
+     * open the folder "Tagging Presets"
+     * add the preset to the field "Active styles" as a local file
 
-3. restart JOSM
+1.b  Use the file from github directly
+     * activate this preset in JOSM -> Edits -> Preferences (or short, press F12) -> Map Settings,
+     * open the folder "Tagging Presets" 
+     * add the preset to the field "Active styles" the URL https://github.com/tijuca/josm-presets/raw/master/oepnv_preset_de-[xxx].xml
+
+2. restart JOSM
 
 oepnv_preset_de-VMT.xml:
   Preset for public transport schema especialy for the VMT in the region of Thuringia, Germany.
