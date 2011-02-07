@@ -49,7 +49,7 @@
 					  de.href="http://wiki.openstreetmap.org/wiki/User:Oxomoa/%C3%96PNV-Schema#Zugangsstelle" />
 				<key  key="public_transport"	value="platform" />
 				<key  key="bus"	value="yes" />
-				<!--<key  key="highway"				value="bus_stop" />  <!--  <- this key/value is only for backward compatibility needed! -->
+				<!--<key  key="highway"				value="bus_stop" />-->  <!--  <- this key/value is only for backward compatibility needed! -->
 				<text key="ref"			text="Referenz"				de.text="Referenz (A, B oder 1 ... 2 z.B.)"	use_last_as_default="true"	default=""		delete_if_empty="true" />
 				<text key="name"		text="Name of the platform"	de.text="Name des Haltestelle"				use_last_as_default="true"	default=""		delete_if_empty="true" />
 				<text key="network"		text="Network"				de.text="Netzwerk"							use_last_as_default="true"	default="VMT"	delete_if_empty="true" />
